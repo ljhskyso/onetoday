@@ -29,14 +29,26 @@ def project_search( keyword ):
       # print('message:           ' + project["message"])
       # print('shortDescription:  ' + project["unitDescription"])
   else:
-      url = 'no project available'
-      prj_name = 'null'
+      #url = 'no project available'
+      #prj_name = 'null'
+      
+      
+      s_resp =  service.offers().create(
+      categoryID=keyword
+    ).execute()
+
+      url = project["projectUrl"]
+      prj_name = project["tagLine"]
+      
+      #using the google api function offers.create
+      
+      
       
   return [ url, prj_name ]
 
   
 def main():
-  keyword = '  water'
+  keyword = '  china'
   [s1, s2] = project_search( keyword )
   print(s1)
   print(s2)
