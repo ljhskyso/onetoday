@@ -32,15 +32,26 @@ def project_search( keyword ):
       #url = 'no project available'
       #prj_name = 'null'
       
+      keyword = "water"
       
-      s_resp =  service.offers().create(
-      categoryID=keyword
+      s_resp =  service.projects().search(
+      query=keyword
     ).execute()
 
       project = s_resp["projects"][0]
       
       url = project["projectUrl"]
       prj_name = project["tagLine"]
+      
+      
+#      s_resp =  service.offers().create(
+#      categoryID=keyword
+#    ).execute()
+#
+#      project = s_resp["projects"][0]
+#      
+#      url = project["projectUrl"]
+#      prj_name = project["tagLine"]
       
       #using the google api function offers.create
       
@@ -58,4 +69,3 @@ def main():
 
 if __name__ == '__main__':
   main()
-  
