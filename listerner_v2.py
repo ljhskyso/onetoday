@@ -47,7 +47,7 @@ class StdOutListener(StreamListener):
         
 ####### post activities1 - find the keyword in the tweet
         receive_tweet( status )
-        keyword = ''
+        keyword = ' '
         keyword_array = status.entities['hashtags']
         for hashtag in status.entities['hashtags']:
             if hashtag['text'] != 'onetoday':

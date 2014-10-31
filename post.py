@@ -1,6 +1,6 @@
 import tweepy, time, sys
  
-def post_tweet(tweet_content):
+def post_tweet(photo_path, tweet_content, status_id):
     # argfile = str(sys.argv[1])
  
     #enter the corresponding information from your Twitter application:
@@ -17,6 +17,8 @@ def post_tweet(tweet_content):
     # filename.close()
  
     # for line in f:
-    api.update_status(tweet_content)
+#    api.update_status(tweet_content)
+    api.update_with_media(photo_path, tweet_content, in_reply_to_status_id = status_id)
+
         # time.sleep(60)#Tweet every 60 seconds
 ###############
