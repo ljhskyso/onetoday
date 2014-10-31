@@ -24,8 +24,8 @@ import peewee
 from peewee import *
 
 # database selection
-# db = MySQLDatabase('hw2', user='dbhw',passwd='')
-db = MySQLDatabase('twitter_bot', user='ct.onetoday',passwd='onetoday@CT')
+db = MySQLDatabase('hw2', user='dbhw',passwd='')
+# db = MySQLDatabase('twitter_bot', user='ct.onetoday',passwd='onetoday@CT')
 # -----------------------------------------------end:   10/31 by Jiheng
 
 
@@ -70,15 +70,22 @@ class StdOutListener(StreamListener):
 
  
  ####### post activities3 - post a reply tweet
-         tweet_content = 'Hello @' + status.user.screen_name + '! Prj: \'' + prj_name + '\'' + ' Url: ' + url
-         # '!! For $1 you can make the difference today! Learn how: ' +
-        
-        
-         reply_type = 1                              #placeholder
-         reply_to_status_id = 1                      #placeholder
-         print('replying: ' + tweet_content)
-         post_tweet(tweet_content, reply_type, reply_to_status_id)       #added two fields, one for the reply type (is it a tweet or comment) as well as the tweetID so we know where to post a reply to
-         print('----------------------------')
+        tweet_content = 'Hello @' + status.user.screen_name + '!! For $1 you can make the difference today! Learn how: ' + url + ' Prj: \'' + prj_name + '\''
+        print('replying: ' + tweet_content)
+        post_tweet(tweet_content)
+        print('----------------------------')
+
+ 
+ 
+        # tweet_content = 'Hello @' + status.user.screen_name + '! Prj: \'' + prj_name + '\'' + ' Url: ' + url
+        # # '!! For $1 you can make the difference today! Learn how: ' +
+        #
+        #
+        # reply_type = 1                              #placeholder
+        # reply_to_status_id = 1                      #placeholder
+        # print('replying: ' + tweet_content)
+        # post_tweet(tweet_content, reply_type, reply_to_status_id)       #added two fields, one for the reply type (is it a tweet or comment) as well as the tweetID so we know where to post a reply to
+        # print('----------------------------')
  
  
  
@@ -108,9 +115,9 @@ def get_user_id( twitter_id, twitter_screen_name ):
 
 def store_twt( user_id, twt_txt, hashtag_cnt):
     # store the tweet
-    sql = 'INSERT INTO t_Twt_Received ( post_user_id, twt_received, hash_tag_cnt ) VALUES ( ' + user_id + ', "' + twt_txt + '", ' + str(hashtag_cnt) + ' )'
+    sql = 'INSERT INTO t_Twt_Received ( post_user_id, twt_received, hash_tag_cnt ) VALUES ( ' + user_id + ', "' + twt_txt + '", ' + hashtag_cnt + ' )'
     db.execute_sql( sql ).fetchall()
-    sql = 'SELECT MAX(twt_received_id) FROM t_Twt_Received WHERE post_user_id = ' + user_id + ' AND twt_received = "' + twt_txt + '" AND hash_tag_cnt = ' + str(hashtag_cnt)
+    sql = 'SELECT MAX(twt_received_id) FROM t_Twt_Received WHERE post_user_id = ' + user_id + ' AND twt_received = "' + twt_txt + '" AND hash_tag_cnt = ' + hashtag_cnt
     twt_id = db.execute_sql( sql ).fetchall()[0][0]
     
     return twt_id
@@ -119,12 +126,15 @@ def receive_tweet( status ):
     # step1: check if the user used BOT. If yes return the user_id; otherwise, create one
     twitter_screen_name = status.user.screen_name
     twitter_id = status.user.id_str
-    user_id = get_user_id( twitter_screen_name )
+    print twitter_screen_name
+    user_id = get_user_id( twitter_id, twitter_screen_name )
         
     # step2: store the tweet
     tweet_txt = status.text
     hashtags = status.entities['hashtags']
-    store_twt( user_id, tweet_txt, len(hashtags) )
+    
+    
+    store_twt( str(user_id), str(tweet_txt), str(len(hashtags)) )
     
 ####################################################
 
@@ -147,13 +157,12 @@ def receive_tweet( status ):
         print('Timeout...')
         return True # To continue listening
         
-print("is running")
  
 if __name__ == '__main__':
     listener = StdOutListener()
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
- 
+   
     stream = Stream(auth, listener)
     print('listener is now under running...')
     stream.filter(track=['#onetoday'])
