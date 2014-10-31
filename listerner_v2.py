@@ -67,14 +67,21 @@ class StdOutListener(StreamListener):
         #                 keyword = keyword_array[i]
         #                 [ url, prj_name ] = project_search( keyword )
         #                 i++
-        
-                    
 
-####### post activities3 - post a reply tweet
-        tweet_content = 'Hello @' + status.user.screen_name + '!! For $1 you can make the difference today! Learn how: ' + url + ' Prj: \'' + prj_name + '\''
-        print('replying: ' + tweet_content)
-        post_tweet(tweet_content)
-        print('----------------------------')
+ 
+ ####### post activities3 - post a reply tweet
+         tweet_content = 'Hello @' + status.user.screen_name + '! Prj: \'' + prj_name + '\'' + ' Url: ' + url
+         # '!! For $1 you can make the difference today! Learn how: ' +
+        
+        
+         reply_type = 1                              #placeholder
+         reply_to_status_id = 1                      #placeholder
+         print('replying: ' + tweet_content)
+         post_tweet(tweet_content, reply_type, reply_to_status_id)       #added two fields, one for the reply type (is it a tweet or comment) as well as the tweetID so we know where to post a reply to
+         print('----------------------------')
+ 
+ 
+ 
  
 
 ####################################################################################
@@ -121,10 +128,10 @@ def receive_tweet( status ):
     
 ####################################################
 
-def handle_null_project( prj_name ):
-    if len(keys) == 0:
+# def handle_null_project( prj_name ):
+    # if len(keys) == 0:
         # call standard project
-    elif 
+    # elif 
     
     
 
@@ -139,6 +146,8 @@ def handle_null_project( prj_name ):
     def on_timeout(self):
         print('Timeout...')
         return True # To continue listening
+        
+print("is running")
  
 if __name__ == '__main__':
     listener = StdOutListener()
