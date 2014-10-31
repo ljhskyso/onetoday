@@ -37,6 +37,8 @@ def project_search( keyword ):
       categoryID=keyword
     ).execute()
 
+      project = s_resp["projects"][0]
+      
       url = project["projectUrl"]
       prj_name = project["tagLine"]
       
