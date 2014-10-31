@@ -32,7 +32,7 @@ def project_search( keyword ):
       #url = 'no project available'
       #prj_name = 'null'
       
-      keyword = "water"
+      keyword = 'water'
       
       s_resp =  service.projects().search(
       query=keyword
@@ -69,3 +69,4 @@ def main():
 
 if __name__ == '__main__':
   main()
+  
