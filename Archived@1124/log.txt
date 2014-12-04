@@ -1,0 +1,121 @@
+listener is now under running...
+Tweet user:  danielserver
+Tweet text:  @one_today #FightEbola
+no media content
+danielserver
+danielserver
+searching project for:  FightEbola
+call onetoday for:  FightEbola
+ FightEbola
+replying: @danielserver $1 can make the difference today! 'Fight Ebola'https://onetoday.google.com/fightebola
+532326052203200513
+2800992971
+./images/ebola.jpg
+----------------------------
+Tweet user:  danielserver
+Tweet text:  @ITwern @one_today #FightEbola
+no media content
+danielserver
+danielserver
+searching project for:  FightEbola
+call onetoday for:  FightEbola
+ FightEbola
+replying: @danielserver $1 can make the difference today! 'Fight Ebola'https://onetoday.google.com/fightebola
+532326400741486592
+1314814267
+./images/ebola.jpg
+----------------------------
+Tweet user:  danielserver
+Tweet text:  @ManiMiri @CoreyLaffel when tweeting use @one_today or #onetodaybeta. Lets help Google #FightEbola
+no media content
+danielserver
+danielserver
+searching project for:  FightEbola
+call onetoday for:  FightEbola
+ FightEbola
+replying: @danielserver $1 can make the difference today! 'Fight Ebola'https://onetoday.google.com/fightebola
+532328357342371841
+770340564
+./images/ebola.jpg
+----------------------------
+Tweet user:  danielserver
+Tweet text:  @one_today #contamination
+no media content
+danielserver
+danielserver
+searching project for:  contamination
+call onetoday for:  contamination
+ contamination
+replying: @danielserver $1 can make the difference today! 'Using Dogs to Clean up Montana Waters'https://onetoday.google.com/p/zUun5rn5
+532351041770360832
+2800992971
+/twitter_BOT/images/20141112-015554.jpg
+----------------------------
+Tweet user:  danielserver
+Tweet text:  @one_today #climatechange
+no media content
+danielserver
+danielserver
+searching project for:  climatechange
+call onetoday for:  climatechange
+ climatechange
+replying: @danielserver $1 can make the difference today! 'Fight Ebola'https://onetoday.google.com/fightebola
+532351654080028673
+2800992971
+./images/ebola.jpg
+----------------------------
+Tweet user:  danielserver
+Tweet text:  @one_today #globalwarming
+no media content
+danielserver
+danielserver
+searching project for:  globalwarming
+call onetoday for:  globalwarming
+ globalwarming
+replying: @danielserver $1 can make the difference today! 'Fight Ebola'https://onetoday.google.com/fightebola
+532351819977338881
+2800992971
+./images/ebola.jpg
+----------------------------
+Tweet user:  danielserver
+Tweet text:  @one_today #puppies
+no media content
+danielserver
+danielserver
+searching project for:  puppies
+call onetoday for:  puppies
+ puppies
+replying: @danielserver $1 can make the difference today! 'Rescue Orphaned Puppies'https://onetoday.google.com/p/vJGZrWcf
+532351963548360704
+2800992971
+/twitter_BOT/images/20141112-015934.jpg
+----------------------------
+Tweet user:  danielserver
+Tweet text:  @one_today #internet
+no media content
+danielserver
+danielserver
+searching project for:  internet
+call onetoday for:  internet
+ internet
+replying: @danielserver $1 can make the difference today! 'Internet Access And Training'https://onetoday.google.com/p/JYiRChVo
+532352256910569472
+2800992971
+/twitter_BOT/images/20141112-020044.jpg
+----------------------------
+Tweet user:  CoreyLaffel
+Tweet text:  testing @one_today  #charity beta testing #water
+no media content
+CoreyLaffel
+searching project for:  charity water
+call onetoday for:  charity water
+ charity water
+replying: @CoreyLaffel $1 can make the difference today! 'The gift of clean water'https://onetoday.google.com/p/6xxRBHKs
+532372366794305536
+None
+/twitter_BOT/images/20141112-032038.jpg
+----------------------------
+Tweet user:  CharitySharer
+Tweet text:  RT @CoreyLaffel: testing @one_today  #charity beta testing #water
+no media content
+CharitySharer

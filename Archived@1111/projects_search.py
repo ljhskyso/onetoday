@@ -1,5 +1,6 @@
 import json
 from apiclient.discovery import build
+from getPictures import getPictures
 
 def project_search( keyword ):
     
@@ -10,7 +11,7 @@ def project_search( keyword ):
 
   # keyword = 'android for autism'
 
-  if keyword == '':
+  if keyword != ' ':
       s_resp =  service.projects().search( query=keyword ).execute()
 
   # print(s_resp)
@@ -20,7 +21,8 @@ def project_search( keyword ):
 
           url = project["projectUrl"]
           prj_name = project["tagLine"]
-      
+          prj_photo_url = project["photoUrl"]
+	  photo_path = getPictures(prj_photo_url)
           # print('url:               ' + project["projectUrl"])
           # print('tagLine:           ' + project["tagLine"])
           # print('Description:       ' + project["unitDescriptionMultiple"])
@@ -41,6 +43,8 @@ def project_search( keyword ):
       
           url = project["projectUrl"]
           prj_name = project["tagLine"]
+          prj_photo_url = project["photoUrl"]
+	  photo_path = getPictures(prj_photo_url)
   else:
         #url = 'no project available'
         #prj_name = 'null'
@@ -55,7 +59,8 @@ def project_search( keyword ):
     
         url = project["projectUrl"]
         prj_name = project["tagLine"]
-      
+     	prj_photo_url = project["photoUrl"]
+	photo_path = getPictures(prj_photo_url) 
       
 #      s_resp =  service.offers().create(
 #      categoryID=keyword
@@ -70,7 +75,7 @@ def project_search( keyword ):
       
       
       
-  return [ url, prj_name ]
+  return [ url, prj_name, photo_path ]
 
   
 def main():

@@ -25,7 +25,7 @@ from peewee import *
 
 # database selection
 db = MySQLDatabase('hw2', user='dbhw',passwd='')
-# db = MySQLDatabase('twitter_bot', user='ct.onetoday',passwd='onetoday@CT')
+# db = MySQLDatabase('twitter_bot', user='root',passwd='onetoday@CT')
 # -----------------------------------------------end:   10/31 by Jiheng
 
 
@@ -55,40 +55,39 @@ class StdOutListener(StreamListener):
         
 ####### post activities2 - call onetoday for project info
         print('searching project for: ' + keyword)
-        [ url, prj_name ] = project_search( keyword )
-        # if prj_name = 'null':
-        #     if len(keyword_array) == 1:
-        #         print 'null_prj_name'
-        #         # call standard project
-        #     else:
-        #         i = 0
-        #         while (prj_name == 'null'):
-        #             if keyword_array[i] != 'onetoday':
-        #                 keyword = keyword_array[i]
-        #                 [ url, prj_name ] = project_search( keyword )
-        #                 i++
+       	[ url, prj_name ] = project_search( keyword )
 
- 
- ####### post activities3 - post a reply tweet
-        tweet_content = 'Hello @' + status.user.screen_name + '!! For $1 you can make the difference today! Learn how: ' + url + ' Prj: \'' + prj_name + '\''
+####### post activities3 - post a reply tweet
+      
+	###### KIM the content of the text was changed
+	tweet_content = '@' + status.user.screen_name + ' $1 can make the difference today! \'' + prj_name + '\'' + url
+        # '!! For $1 you can make the difference today! Learn how: ' +
+        
+
+	###### KIM the following path includes the address for the picture. You should be able to put in here the picture retrieved from Google
+	
+	photo_file = '/twitter_BOT/images/education.jpg'
+	#the following line replaces the static path photo_path
+	#photo_path = prj_photo_url
+	#photo_file = photo_path
         print('replying: ' + tweet_content)
-        post_tweet(tweet_content)
-        print('----------------------------')
 
+	print(status.id)
+	print(status.in_reply_to_user_id)
+	print(photo_file)
+
+
+        ###### KIM the following line replaces post_tweet(tweet_content) since the function post_tweet on post.py was modified to receive the path for the image 
+	post_tweet(photo_file, tweet_content, status.id)
+        print('----------------------------')
  
+    def on_error(self, status_code):
+        print('Got an error with status code: ' + str(status_code))
+        return True # To continue listening
  
-        # tweet_content = 'Hello @' + status.user.screen_name + '! Prj: \'' + prj_name + '\'' + ' Url: ' + url
-        # # '!! For $1 you can make the difference today! Learn how: ' +
-        #
-        #
-        # reply_type = 1                              #placeholder
-        # reply_to_status_id = 1                      #placeholder
-        # print('replying: ' + tweet_content)
-        # post_tweet(tweet_content, reply_type, reply_to_status_id)       #added two fields, one for the reply type (is it a tweet or comment) as well as the tweetID so we know where to post a reply to
-        # print('----------------------------')
- 
- 
- 
+    def on_timeout(self):
+        print('Timeout...')
+        return True # To continue listening
  
 
 ####################################################################################

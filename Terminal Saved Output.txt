@@ -1,0 +1,132 @@
+Last login: Thu Nov 20 14:35:50 on console
+dhcp-ccc-6504:~ ljhskyso$ ssh 2cood
+ljhskyso@2cood.com's password: 
+Last login: Thu Nov 13 23:19:53 2014 from c-69-141-44-112.hsd1.nj.comcast.net
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2014.09-release-notes/
+[ljhskyso@ip-172-31-30-248 ~]$ ps -aux | grep python
+Warning: bad syntax, perhaps a bogus '-'? See /usr/share/doc/procps-3.2.8/FAQ
+ljhskyso 23672  0.0  0.0 110284   844 pts/0    S+   19:44   0:00 grep python
+[ljhskyso@ip-172-31-30-248 ~]$ ps -aux
+Warning: bad syntax, perhaps a bogus '-'? See /usr/share/doc/procps-3.2.8/FAQ
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.1  19484  1232 ?        Ss   Sep22   0:04 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    Sep22   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    Sep22   0:01 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        S    Sep22   0:07 [kworker/u30:0]
+root         7  0.0  0.0      0     0 ?        S    Sep22   0:00 [migration/0]
+root         8  0.0  0.0      0     0 ?        S    Sep22   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    Sep22   0:05 [rcu_sched]
+root        10  0.0  0.0      0     0 ?        S<   Sep22   0:00 [khelper]
+root        11  0.0  0.0      0     0 ?        S    Sep22   0:00 [kdevtmpfs]
+root        12  0.0  0.0      0     0 ?        S<   Sep22   0:00 [netns]
+root        13  0.0  0.0      0     0 ?        S    Sep22   0:00 [kworker/u30:1]
+root        19  0.0  0.0      0     0 ?        S    Sep22   0:00 [xenwatch]
+root        20  0.0  0.0      0     0 ?        S    Sep22   0:00 [xenbus]
+root        21  0.0  0.0      0     0 ?        S    Sep22   1:16 [kworker/0:1]
+root       111  0.0  0.0      0     0 ?        S<   Sep22   0:00 [writeback]
+root       113  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kintegrityd]
+root       114  0.0  0.0      0     0 ?        S<   Sep22   0:00 [bioset]
+root       115  0.0  0.0      0     0 ?        S<   Sep22   0:00 [crypto]
+root       117  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kblockd]
+root       192  0.0  0.0      0     0 ?        S<   Sep22   0:00 [xenbus_frontend]
+root       200  0.0  0.0      0     0 ?        S<   Sep22   0:00 [md]
+root       308  0.0  0.0      0     0 ?        S    Sep22   0:00 [khungtaskd]
+root       313  0.0  0.0      0     0 ?        S    Sep22   0:00 [kswapd0]
+root       314  0.0  0.0      0     0 ?        SN   Sep22   0:00 [ksmd]
+root       380  0.0  0.0      0     0 ?        SN   Sep22   0:00 [khugepaged]
+root       381  0.0  0.0      0     0 ?        S    Sep22   0:00 [fsnotify_mark]
+root       396  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kthrotld]
+root       404  0.0  0.0      0     0 ?        S    Sep22   0:00 [khvcd]
+root       452  0.0  0.0      0     0 ?        S<   Sep22   0:00 [deferwq]
+root       799  0.0  0.0      0     0 ?        S    Sep22   0:09 [jbd2/xvda1-8]
+root       800  0.0  0.0      0     0 ?        S<   Sep22   0:00 [ext4-dio-unwrit]
+root       835  0.0  0.0  10808   880 ?        Ss   Sep22   0:00 /sbin/udevd -d
+root       927  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kpsmoused]
+root       958  0.0  0.0      0     0 ?        S    Sep22   0:00 [kworker/0:2]
+root      1093  0.0  0.0      0     0 ?        S    Sep22   0:06 [kauditd]
+root      1262  0.0  0.0   9228   968 ?        Ss   Sep22   0:01 /sbin/dhclient -q -lf /var/lib/dhcl
+root      1320  0.0  0.4 249776  4668 ?        Sl   Sep22   0:25 /sbin/rsyslogd -i /var/run/syslogd.
+root      1367  0.0  0.0   4196   388 ?        Ss   Sep22   0:00 /usr/sbin/acpid
+ntp       1555  0.0  0.1  31308  1596 ?        Ss   Sep22   0:03 ntpd -u ntp:ntp -p /var/run/ntpd.pi
+root      1570  0.0  0.2  89312  2336 ?        Ss   Sep22   1:18 sendmail: accepting connections
+smmsp     1577  0.0  0.2  80772  2056 ?        Ss   Sep22   0:00 sendmail: Queue runner@01:00:00 for
+root      1585  0.0  0.1 119388  1248 ?        Ss   Sep22   0:08 crond
+root      1630  0.0  0.0   6304   664 ttyS0    Ss+  Sep22   0:00 /sbin/agetty ttyS0 9600 vt100-nav
+root      1633  0.0  0.0   4180   504 tty1     Ss+  Sep22   0:00 /sbin/mingetty /dev/tty1
+root      1637  0.0  0.0   4180   508 tty2     Ss+  Sep22   0:00 /sbin/mingetty /dev/tty2
+root      1639  0.0  0.0   4180   504 tty3     Ss+  Sep22   0:00 /sbin/mingetty /dev/tty3
+root      1641  0.0  0.0   4180   508 tty4     Ss+  Sep22   0:00 /sbin/mingetty /dev/tty4
+root      1645  0.0  0.0   4180   504 tty5     Ss+  Sep22   0:00 /sbin/mingetty /dev/tty5
+root      1649  0.0  0.0   4180   508 tty6     Ss+  Sep22   0:00 /sbin/mingetty /dev/tty6
+ljhskyso  3400  0.0  0.1 125840  1436 ?        Ss   Nov13   0:00 SCREEN
+ljhskyso  3401  0.0  0.1 115152  2028 pts/4    Ss+  Nov13   0:00 /bin/bash
+root      4712  0.0  0.1  77820  1292 ?        Ss   Oct27   0:18 /usr/sbin/sshd
+root      5210  0.0  0.1 115016  1664 ?        S    Oct05   0:00 /bin/sh /usr/bin/mysqld_safe --data
+mysql     5405  0.0  4.1 813416 42852 ?        Sl   Oct05  15:20 /usr/libexec/mysqld --basedir=/usr
+root      6939  0.0  0.0      0     0 ?        S<   Sep25   0:00 [kworker/0:1H]
+apache   17704  0.0  1.3 426216 13544 ?        S    Nov16   0:00 /usr/sbin/httpd
+apache   17705  0.0  1.3 426216 13708 ?        S    Nov16   0:00 /usr/sbin/httpd
+apache   17706  0.0  1.3 426216 13708 ?        S    Nov16   0:00 /usr/sbin/httpd
+apache   17707  0.0  1.3 426216 13596 ?        S    Nov16   0:00 /usr/sbin/httpd
+apache   17708  0.0  1.3 426216 13724 ?        S    Nov16   0:00 /usr/sbin/httpd
+apache   17709  0.0  1.3 426216 13728 ?        S    Nov16   0:00 /usr/sbin/httpd
+apache   17710  0.0  1.3 426216 13732 ?        S    Nov16   0:00 /usr/sbin/httpd
+apache   17711  0.0  1.3 426216 13696 ?        S    Nov16   0:00 /usr/sbin/httpd
+root     21565  0.0  1.8 424532 18388 ?        Ss   Sep30   1:24 /usr/sbin/httpd
+apache   21672  0.0  1.3 426216 13544 ?        S    Nov17   0:00 /usr/sbin/httpd
+root     23635  0.0  0.4 111580  4384 ?        Ss   19:44   0:00 sshd: ljhskyso [priv]
+ljhskyso 23639  0.0  0.2 111580  2192 ?        S    19:44   0:00 sshd: ljhskyso@pts/0
+ljhskyso 23640  0.0  0.1 115152  1980 pts/0    Ss   19:44   0:00 -bash
+ljhskyso 23673  0.0  0.1 117048  1228 pts/0    R+   19:44   0:00 ps -aux
+dbus     28443  0.0  0.0  21628   440 ?        Ss   Sep30   0:00 dbus-daemon --system
+root     28502  0.0  0.0 111816  1012 ?        S<sl Sep30   0:41 auditd
+root     28534  0.0  0.0  16908   368 ?        Ss   Sep30   0:00 /usr/sbin/atd
+502      30669  0.0  0.1 125844  1396 ?        Ss   Nov12   0:00 SCREEN
+502      30670  0.0  0.1 115152  2004 pts/3    Ss+  Nov12   0:00 /bin/bash
+502      31249  0.0  0.1 125844  1420 ?        Ss   Nov04   0:00 SCREEN
+502      31250  0.0  0.1 115152  2032 pts/1    Ss+  Nov04   0:00 /bin/bash
+502      31356  0.0  0.1 125976  1452 ?        Ss   Nov04   0:00 SCREEN
+502      31357  0.0  0.1 115152  2028 pts/2    Ss+  Nov04   0:00 /bin/bash
+[ljhskyso@ip-172-31-30-248 ~]$ cd /twitter_BOT/
+[ljhskyso@ip-172-31-30-248 twitter_BOT]$ ls
+apiclient            keys.pyc                     log.txt                   projects_search.py
+backup               listener_with_reply_code.py  oauth2client              projects_search.pyc
+client_secrets.json  listernerBeta.py             posting.py                sample_tweet_status.txt
+Daemon.py            listernerDaemon.py           post.py                   slistener.py
+getPictures.py       listerner.py                 post.pyc                  standardResponse.txt
+getPictures.pyc      listerner_v2.py              post_update.py            test123
+hackday2             listerner_v3.py              projects_searchBackUp.py  test.py
+httplib2             listernerWithPictures.py     projects_searchBeta2.py   test_rmate.py
+images               log2.txt                     projects_searchBeta.py    urlshortener.dat
+keys.py              log.out                      projects_searchBeta.pyc   url_shortener.py
+[ljhskyso@ip-172-31-30-248 twitter_BOT]$ screen -r
+
+[ljhskyso@ip-172-31-30-248 twitter_BOT]$ Tweet user:  hyrvine
+Tweet text:  #onetodaybeta #schools
+no media content
+hyrvine
+searching project for:  schools
+call onetoday for:  schools
+ schools
+replying: @hyrvine $1 can make the difference today! 'Books for Lakota Children in SD'https://onetoday.google.com/p/jVYhjj3r
+533008023367602176
+None
+/twitter_BOT/images/20141113-212631.jpg
+----------------------------
+Traceback (most recent call last):
+  File "listernerBeta.py", line 169, in <module>
+    stream.filter(track=['#onetodaybeta', '@one_today'])
+  File "build/bdist.linux-x86_64/egg/tweepy/streaming.py", line 344, in filter
+  File "build/bdist.linux-x86_64/egg/tweepy/streaming.py", line 258, in _start
+  File "build/bdist.linux-x86_64/egg/tweepy/streaming.py", line 184, in _run
+  File "build/bdist.linux-x86_64/egg/tweepy/streaming.py", line 237, in _read_loop
+  File "/usr/lib/python2.7/site-packages/requests-2.4.1-py2.7.egg/requests/utils.py", line 341, in iter_slices
+    while pos < len(string):
+TypeError: object of type 'bool' has no len()
+
