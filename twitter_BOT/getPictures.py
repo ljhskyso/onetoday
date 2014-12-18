@@ -8,3 +8,10 @@ def getPictures(photo_url):
 	photo_name = '/twitter_BOT/images/' + now + '.jpg'
 	urllib.urlretrieve(photo_url, photo_name)
 	return photo_name
+
+def getUserPic(url):
+	i = datetime.now()
+	now = i.strftime('%Y%m%d-%H%M%S')
+	photo_name = './donorImg/' + now + '.jpg'
+	urllib.urlretrieve(photo_url, photo_name)
+	return photo_name
