@@ -1,0 +1,14 @@
+listener is now under running...
+Tweet user:  danielserver
+Tweet text:  @danielserver: @one_today #FightEbola the goal is soon to be reached!! Doing good and cool things that matter!
+no media content
+danielserver
+danielserver
+searching project for:  FightEbola
+call onetoday for:  FightEbola
+ FightEbola
+replying: @danielserver $1 can make the difference today! 'Fight Ebola'https://onetoday.google.com/fightebola
+532601606614048768
+78773698
+./images/ebola.jpg
+----------------------------
